@@ -14,6 +14,9 @@ int main() {
     double Transactions;
     double Debit = 0;
     double Credit = 0;
+    string Type;
+    double Money;
+
     
     //Asks user to input how much money they had in their bank account at the start of the day
     cout << "How much money did you have in your bank account at the start of the day? ";
@@ -26,10 +29,6 @@ int main() {
     //Loop will keep looping as long as the number of transactions isn't zero
     while (Transactions != 0)
     {
-        //Making variables for type of transaction and amount of money in the transaction
-        string Type;
-        double Money;
-
         //Asking user to input what kind of transaction they made
         cout << "What type of transaction did you make? ";
         cin >> Type;
@@ -68,9 +67,9 @@ int main() {
     }
 
     //In the end of code prints out total amount of money in bank account, the total amount of debit and credit amounts for the day
-    cout << "The total money left in your account is: " << Account << endl;
-    cout << "Here are your total debit amounts for the day: $" << Debit << endl;
-    cout << "Here are your total credit amounts for the day: $" << Credit << endl;
+    cout << "The total money left in your account is: " << setprecision(4) << Account << endl;
+    cout << "Here are your total debit amounts for the day: $" << setprecision(4) << Debit << endl;
+    cout << "Here are your total credit amounts for the day: $" << setprecision(4) << Credit << endl;
 
 return 0;
 }
